@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace Test.Domain.Entity
 {
     public class User
     {
+        [Key]
         public Guid Id { get; set; }= Guid.NewGuid();
         public required string Fname { get; set; }
         public required string Lname { get; set; }

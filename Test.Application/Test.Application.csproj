@@ -23,9 +23,4 @@
     <ProjectReference Include="..\Test.Domain\Test.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Query\ItemQuery\Handler\" />
-    <Folder Include="Features\Query\ItemQuery\Query\" />
-  </ItemGroup>
-
 </Project>

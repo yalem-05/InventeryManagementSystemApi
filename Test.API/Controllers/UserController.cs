@@ -36,5 +36,18 @@ namespace Test.API.Controllers
             return Ok(dataa);
 
         }
+
+        [HttpGet("GetByName/{Fname}")]
+        public async Task<IActionResult> GetaLData(string Fname)
+        {
+            var data = new GetByNameQuery { firstName=Fname};
+            var dataa = await mediator.Send(data);
+            if (dataa == null)
+            {
+                return Ok("the given data not found");
+            }
+            return Ok(dataa);
+
+        }
     }
 }

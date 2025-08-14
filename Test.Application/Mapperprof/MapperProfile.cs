@@ -16,6 +16,7 @@ namespace Test.Application.Mapperprof
       CreateMap<User, UserDto>().ReverseMap();
       CreateMap<Item, ItemDto>().ReverseMap();
       CreateMap<User, GetUserDto>().ReverseMap();
+      CreateMap<Item, GetItemDto>().ReverseMap();
         }
     }
 }
