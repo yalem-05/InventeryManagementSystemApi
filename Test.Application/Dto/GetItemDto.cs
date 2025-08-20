@@ -19,6 +19,7 @@ namespace Test.Application.Dto
         public int status { get; set; }
         public DateTime RegDate { get; set; }
         public Guid CraetedBy { get; set; }
+        public Guid UserId { get; set; }
         public Guid? UpdatedBy { get; set; }
     }
 }

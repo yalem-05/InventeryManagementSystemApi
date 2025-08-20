@@ -12,5 +12,6 @@ namespace Test.Application.PersistenceInterface
     public interface IItem: IGeneric<Item>
     {
       Task<GetItemDto> GetItemByName(string itemName);
+      Task<List<Item>> GetAllDataWithId(Guid Id);
     }
 }

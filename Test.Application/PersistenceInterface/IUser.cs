@@ -13,5 +13,6 @@ namespace Test.Application.PersistenceInterface
     {
         
        Task<GetUserDto> GetUserByName(string fname);
+  
     }
 }

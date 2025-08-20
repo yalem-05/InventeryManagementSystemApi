@@ -49,5 +49,18 @@ namespace Test.API.Controllers
             return Ok(dataa);
 
         }
+
+        [HttpGet("GetUserById/{id}")]
+
+        public async Task<IActionResult> GetUserById(Guid id)
+        {
+            var command = new GetByUserIdQuery { Id=id};
+            var data = await mediator.Send(command);
+            if(data == null)
+            {
+                return Ok("No data found on this Id");
+            }
+            return Ok(data);
+        }
     }
 }

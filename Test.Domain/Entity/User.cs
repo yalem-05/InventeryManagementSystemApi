@@ -22,5 +22,9 @@ namespace Test.Domain.Entity
         public int Stataus { get; set; }
         public Guid CraetedBy { get; set; }
         public Guid? UpdatedBy { get; set; }
+
+        public ICollection<Item> items { get; set; }
+
+
     }
 }

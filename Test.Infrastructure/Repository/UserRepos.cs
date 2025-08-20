@@ -22,6 +22,15 @@ namespace Test.Infrastructure.Repository
             mapper= _mapper;
         }
 
+        public async Task<List<Item>> GetAllDataWithId(Guid Id)
+        {
+          var data= await context.items
+                   .Where(p => p.UserId == Id)
+                   .Include(p => p.users)
+                   .ToListAsync();
+             return data;
+        }
+
         public async Task<GetUserDto> GetUserByName(string fname)
         {
             

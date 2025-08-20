@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Test.Domain.Entity;
 using Test.Domain.IGenericInterfave;
 using Test.Infrastructure.Data;
 
@@ -41,6 +42,11 @@ namespace Test.Infrastructure.Repository
 
         public async Task<T> GetById(Guid id)
         {
+       //     var posts = await context.users
+       //.Where(p => p.UserId == userId)
+       //.Include(p => p.User)
+       //.ToListAsync();
+      // var nw=await context.Set<T>().Where(p=>p.UserId==id).Include(p => p.User).ToListAsync();
             var data= await context.Set<T>().FindAsync(id);
             if (data != null)
             {

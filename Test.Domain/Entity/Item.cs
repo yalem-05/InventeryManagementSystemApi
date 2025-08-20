@@ -24,6 +24,8 @@ namespace Test.Domain.Entity
      
         public Guid CraetedBy { get; set; }
         public Guid? UpdatedBy { get; set; }
+        public Guid UserId { get; set; }
+        public User users { get; set; }
 
     }
 }
